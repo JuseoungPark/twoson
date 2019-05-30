@@ -18,8 +18,7 @@
 								</div>
 								<span></span>
 							</v-card-title>
-						</v-img>
-						
+						</v-img>	
 					</v-card>
 				</v-flex>
 			</v-layout>

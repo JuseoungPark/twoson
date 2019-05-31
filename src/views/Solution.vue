@@ -15,7 +15,7 @@
 						:titleOfChild="item.title"
 						:subTitleOfChild="item.subTitle"
 						class="solutionCard"
-					/>
+					></SolutionCard>
 					<button @click="handleClickButton">얍</button>
 				</v-flex>
 			</v-layout>
@@ -25,9 +25,9 @@
       :popupTitleOfChild="popupTitle"
       :visible.sync="visible"
 		>
-      <!-- <div>
+      <div>
         This is modal body
-      </div> -->
+      </div>
     </app-my-modal>
 
 	</div>

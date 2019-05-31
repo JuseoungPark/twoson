@@ -32,7 +32,8 @@ export default {
 		imgOfChild: String,
 		titleOfChild: String,
 		subTitleOfChild: String,
-	}
+	},
+
 }
 </script>
 

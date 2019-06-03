@@ -34,6 +34,14 @@ export default {
 </script>
 
 <style>
+  #app {
+     font-family:'Lato', 'Noto Sans KR', sans-serif; /* this was it */
+     background:url(./assets/bg-noise.jpg) 0 0 repeat
+  }
+  html {
+    min-width: 1410px;
+    overflow-x:auto;
+  }
   ul {
     list-style-type: none;
     padding: 0;
@@ -41,7 +49,7 @@ export default {
   }
   .inner {
     display: flex;
-    width: 92%;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-between;
   }
@@ -57,7 +65,7 @@ export default {
     color: #313034;
   }
   .layoutSubTxt {
-    color: #929292;
+    color: #333;
     font-size: 16px;
     text-transform: capitalize;
   }

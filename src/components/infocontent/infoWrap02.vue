@@ -1,9 +1,11 @@
 <template>
 	<div class="infoWrap">
 		<div class="inner">
-			<h4 class="infoTitle">company <br>history</h4>
-			<div class="infoContentWrap">
-				<p class="simpleTxt">present ~ 2011</p>
+			<div class="infoTitleWrap history">
+				<h4 class="infoTitle">company <br>History</h4>
+			</div>
+			<div class="infoContentWrap history">
+				<!-- <p class="simpleTxt">present ~ 2011</p> -->
 				<ul class="infoHistoryWrap">
 					<li
 						v-for="yearByYear in history"
@@ -38,6 +40,18 @@ export default {
 				years: '2018',
 				issues: [
 					{ event: 'GFC 2019 (NICE)' },
+					{ event: '푸르덴셜 글로벌푸르덴셜 글로벌푸르덴셜 글로벌푸르덴셜 글로벌' },
+					{ event: 'NH손해보험' },
+					{ event: 'GFC 2019 (NICE)' },
+					{ event: '푸르덴셜 글로벌' },
+					{ event: 'NH손해보험' },
+					{ event: 'GFC 2019 (NICE)' },
+					{ event: '푸르덴셜 글로벌' },
+					{ event: 'NH손해보험' },
+					{ event: 'GFC 2019 (NICE)' },
+					{ event: '푸르덴셜 글로벌' },
+					{ event: 'NH손해보험' },
+					{ event: 'GFC 2019 (NICE)' },
 					{ event: '푸르덴셜 글로벌' },
 					{ event: 'NH손해보험' },
 				],
@@ -67,34 +81,49 @@ export default {
 <style>
 	.infoHistoryWrap {
 		display: flex;
+		height: inherit;
 	}
-	.infoContentWrap {
-		width: 100%;
+	.infoContentWrap.history {
+		width: 65%;
+		height: 100%;
 	}
 	.simpleTxt {
 		text-transform: capitalize;
 	}
+	.infoWrap .infoTitleWrap.history {
+		width:35%;
+	}
 	.infoHistoryWrap .yearByYear {
 		background: #ffffff;
-		width: 30%;
-		margin-right: 20px;
-		padding: 34px 32px 24px 42px;
-		min-height: 340px;
+		width: 33%;
+		margin-right: 1.5vw;
+		padding: 1.5vw 0 1.5vw 1.5vw;
+	}
+	.infoHistoryWrap .yearByYear:last-of-type {
+		margin-right: 0;
+	}
+	.majorIssueWrap {
+		height:calc(100% - 25px - 2.5vw);
+		overflow-y: auto;
+		padding-right: calc(1.5vw + 13px)
 	}
 	.ctTitle {
-		font-size: 1.8rem;
+		font-size: 25px;
 		font-weight: bold;
-		margin-bottom: 50px;
+		margin-bottom: 1.5vw;
 	}
 	.ctTxt::before {
 		content: '-';
 		display: inline-block;
-		padding-right: 10px;
+		position: absolute;
+		left: 0;
 	}
 	.ctTxt {
-		font-size: 1rem;
+		padding-left: 10px;
+		position: relative;
+		font-size: 16px
 	}
 	.infoHistoryWrap .majorIssue {
-		margin-bottom: 12px;
+		margin-bottom: 10px;
 	}
 </style>

@@ -10,7 +10,6 @@
 						<router-link
 							:to="{ name: menu.link }"
 							class="footerMenu"
-							:class="{ udLine: menu.underline }"
 						>{{ menu.title }}</router-link>
 					</li>
 				</ul>
@@ -46,7 +45,6 @@ export default {
 				{
 					title: '입사지원',
 					link: '',
-					underline: true,
 				},
 				{
 					title: '회사소개서 받기',
@@ -73,21 +71,27 @@ export default {
 		background: #3F3D43;
 		padding-top: 47px;
 		color: rgba(255,255,255,.7);
+		font-weight: 300
 	}
 	.footerWrap {
-		width: 97%;
-		margin: 0 auto;
+		width: 100%;
+		padding: 0 5vw;
 	}
 	.footerWrap ul {
 		display: flex;
+		text-align: right;
 	}
 	.footerWrap .contentWrap .joinWrap {
 		margin-bottom: 35px;
 	}
 	.footerMenu {
 		color: rgba(255,255,255,.7);
-		text-decoration-line: none;
+		text-decoration: none;
 		margin-right: 25px;
+	}
+	.footerMenu:hover {
+		color: rgba(255,255,255,1);
+		text-decoration:underline
 	}
 	.footerMenu.udLine {
 		color: #fff;

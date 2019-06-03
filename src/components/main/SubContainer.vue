@@ -61,7 +61,7 @@ export default {
 		text-transform: capitalize;
 	}
 	.layoutSubTxt + .contentSubtxt {
-		color: #919191;
+		color: #333;
 		margin-top: 12px;
 		word-break: keep-all;
 	}

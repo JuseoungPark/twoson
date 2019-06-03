@@ -46,9 +46,12 @@ export default {
 		display: flex;
 	}
 	.gnb .gnbItems {
-		margin-right: 30px;
+		margin-left: 30px;
+		color:#fff
 	}
 	.gnbWrap {
-		margin-right: 80px;
+		float: right;
+		height: 100%;
+		padding-top: 20px
 	}
 </style>

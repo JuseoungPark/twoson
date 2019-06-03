@@ -84,7 +84,9 @@ export default {
 
 <style>
 	.mainInner {
-		width: 75%;
+		width: 100vw;
+		/* padding:0 5vw; */
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 	.mainInner ul {
@@ -98,21 +100,24 @@ export default {
 	.mainCtLayout .contentTitle {
 		font-size: 40px;
 		text-transform: capitalize;
-		font-weight: 500;
+		font-weight: bold;
 	}
 	.mainCtLayout .contentSubTxt {
 		font-size: 16px;
 	}
 	.mainCtLayout.portFolio {
-		background: url(~@/assets/main-layout-01.png) -240px 64px no-repeat;
+		background: url(~@/assets/main-layout-02.jpg) center center no-repeat;
 		background-size: cover;
-		border: 1px solid #AEAEAE;
-		width: 49%;
-		height: 520px;
+		/* border: 1px solid #AEAEAE; */
+		width:calc(50vw - 10px);
+		max-width:590px;
+		height: 50vw;
+		max-height:590px;
 		text-align: right;
 	}
 	.mainCtLayout.portFolio .mainTxtWrap {
-		margin-left: 26%;
+		/* margin-left: 10vh; */
+		width:100%
 	}
 	.mainCtLayout.portFolio .contentTitle {
 		color: #000;
@@ -122,9 +127,12 @@ export default {
 	}
 	.mainCtLayout.solution {
 		background: #42424B;
-		background: url(~@/assets/main-layout-02.png) 104px 176px no-repeat;
+		/* background: url(~@/assets/main-layout-02.png) 104px 176px no-repeat; */
 		background-size: cover;
-		width: 49%;
+		width:calc(50vw - 10px);
+		max-width:590px;
+		height: 50vw;
+		max-height:590px;
 		color: #fff;
 	}
 	.mainCtLayout.solution .mainTxtWrap {
@@ -146,11 +154,13 @@ export default {
 		margin-top: 35px;
 	}
 	.mainCtLayout.news {
-		width: 100%;
-		height: 520px;
+		width: 100vw;
+		max-width:1200px;
+		height: 50vw;
+		max-height:calc(600px - 1vw);
 		background: rgba(0,0,0,.3);
 		text-align: left;
-		margin-top: 22px;
+		margin-top: 20px;
 		background: url(~@/assets/main-layout-03.png) 0 0 no-repeat;
 		background-size: cover;
 	}
@@ -168,7 +178,7 @@ export default {
 		background: linear-gradient(to top, rgba(73,73,105,0.8), rgba(255,255,255,0));
 	}
 	.overlay.wt {
-		background: rgba(255,255,255,.5);
+		background: rgba(65, 148, 168, 0.4);
 	}
 	.overlay.pp {
 		background: rgba(16,16,27,.7);
@@ -182,13 +192,14 @@ export default {
 	}
 	.mainCtLayout.news .contentTitle,
 	.mainCtLayout.news .contentSubTxt {
-		color: #444470;
+		color: #333350;
 	}
 	.mainCtLayout.news .postWrap {
-		width: 400px;
+		width: 30vh;
 		color: #fff;
+		text-align: justify;
 		align-self: flex-end;
-		word-break: keep-all;
+		word-break: break-all;
 	}
 	.postTitle {
 		font-size: 20px;
@@ -204,9 +215,13 @@ export default {
 		color: #000;
 	}
 	.btn.solid.gray {
-		padding: 5px 43px;
+		text-align: center;
 		color: #000;
 		background: rgba(255,255,255,.5);
+		transition:all .4s
+	}
+	.btn.solid.gray:hover {
+		background: rgba(255,255,255,.8);
 	}
 	.btn.withIcon::after {
 		content: '';

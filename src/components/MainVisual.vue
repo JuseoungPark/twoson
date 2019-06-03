@@ -17,16 +17,14 @@
 						</ul>
 					</div>
 					<div class="copyLB">
-						<h2 class="mainTitle">about <br>us</h2>
-					</div>	
+						<h2 class="mainTitle">Playground<br>For Developers</h2>
+						<p class="subCopy">두손소프트는 국내 유수기업의 사업컨설팅과 함께 신규사업, 개발사업, 혁신사업 등 다양한 프로젝트 구축 경험이 있습니다.</p>
+					</div>
 				</div>
 				<div class="copyR">
 					<div class="copyRT">
-						<p>회사소개</p>
+						<p>두손소프트</p>
 						<p class="udline">TwoSonSoft</p>
-					</div>
-					<div class="copyRB">
-						<p class="subCopy">두손소프트는 국내 유수기업의 사업컨설팅과 함께 신규사업, 개발사업, 혁신사업 등 다양한 프로젝트 구축 경험이 있습니다.</p>
 					</div>
 				</div>
 			</div>
@@ -43,15 +41,15 @@ export default {
 
 <style>
 	.mainVisual {
-		height: 102vh;
-		background: url(~@/assets/main-visual-03.jpg) 0 70% no-repeat;
+		height: 100vh;
+		background: url(~@/assets/main-visual-04.jpg) 50% 50% no-repeat;
 		background-size: cover;
 		line-height: 1;
 		color: #fff;
 	}
 	.overlay {
 		/* background: rgba(0,0,0,.2); */
-		background: rgba(0,49,97,.6);
+		background: rgba(0,0,0,.45);
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -59,66 +57,65 @@ export default {
 		justify-content: center;
 	}
 	.mainCopy {
-		width: 84%;
-		height: 66%;
-		display: flex;
-		justify-content: space-between;
-		margin-top: 82px;
+		box-sizing: border-box;
+		width:100%;
+		padding: calc(5vw + 60px) 5vw 5vw 5vw;
+		height: inherit;
+		position: relative;
 	}
 	.copyL {
-		width: 50%;
-		height: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		align-content: space-between;
+		width:100%
 	}
 	.copyLT {
 		display: flex;
 		width: 100%;
 	}
 	.copyLT ul:first-child {
-		margin-right: 177px;
+		margin-right: 5vw;
 	}
 	.copyLT ul li {
-		margin-bottom: 10px;
+		margin-bottom: 14px;
 		font-weight: 300;
 	}
 	.copyLB {
-		width: 100%;
+		width: calc(100% - 10vw);
+		position:absolute;
+		bottom:5vw
 	}
 	.mainTitle {
-		font-size: 70px;
-		font-weight: 800;
-		line-height: 64px;
-		color: #fff;
+		font-family: "Lato" !important;
+		font-size: 6.5rem;
+		line-height: 5.5rem;
+		color: rgba(255,255,255,0.8);
 		text-transform: uppercase;
+		float: left;
+	}
+	.subCopy {
+		width: 25vw;
+		word-break: keep-all;
+		line-height: 24px;
+		font-size: 14px;
+		float: right;
+		text-align: right;
+		font-weight: lighter;
+		position:absolute;
+		bottom: 0;
+		right: 0;
 	}
 	.copyR {
 		height: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		align-content: space-between;
 	}
 	.copyRT {
-		width: 100%;
-		position: relative;
+		position:absolute;
+		right: 5vw;
+		top:calc(60px + 5vw + 14px)
 	}
 	.copyRT p {
+		font-weight: lighter;
+		display: block;
 		transform: rotate(90deg);
-		text-align: left;
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin-top: 18px;
-	}
-	.copyRT p.udline {
-		text-decoration-line: underline;
-		top: 140px;
-		margin-right: -10px;
-	}
-	.copyRB .subCopy {
-		width: 366px;
-		word-break: keep-all;
-		line-height: 20px;
+		text-align: right;
+		margin-bottom: calc(50vh - 60px - 5vw);
+		margin-right : -25px
 	}
 </style>

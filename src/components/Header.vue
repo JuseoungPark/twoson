@@ -1,12 +1,11 @@
 <template>
-	<v-toolbar app>
-		<v-toolbar-title class="headline text-uppercase">
+	<div class="header">
+		<div class="headline text-uppercase">
 			<h1
 				@click="$router.push('/')"
 				class="logo"
 			></h1>
-		</v-toolbar-title>
-		<v-spacer></v-spacer>
+		</div>
 		<GNB />
 		<!-- <v-btn
 			flat
@@ -14,7 +13,7 @@
 		>
 			<span class="mr-2 hide">햄버거 메뉴</span>
 		</v-btn> -->
-	</v-toolbar>
+	</div>
 </template>
 
 <script>
@@ -28,24 +27,22 @@ export default {
 </script>
 
 <style>
+	.header {
+		background: rgba(0, 0, 0, .6);
+		position: fixed;
+		width:100%;
+		height: 60px;
+		z-index: 999;
+		padding: 0 5vw
+	}
 	.logo {
 		background: url(~@/assets/logo.png) 0 0 no-repeat;
 		background-size: cover;
 		width: 218px;
 		height: 48px;
 		cursor: pointer;
-	}
-	.v-toolbar,
-	.v-toolbar__content {
-		height: 82px !important;
-		border-bottom: 1px solid #D9D9D9;
-	}
-	.theme--light.v-toolbar {
-		background: rgba(255,255,255,.4);
-		color: #000;
-	}
-	.v-btn__content {
-		color: #fff;
+		float: left;
+		margin-top:4px
 	}
 	.menu-icon {
 		background: url(~@/assets/menu-btn.png) 0 0 no-repeat;

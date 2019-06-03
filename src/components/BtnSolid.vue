@@ -17,9 +17,10 @@ export default {
 	} */
 	button.solid {
 		background: #3F3D43;
+		border:1px solid #3F3D43;
+		margin-right: 10px;
 		padding: 5px 0;
 		min-width: 150px;
-		line-height: 20px;
 		color: #fff;
 	}
 	button.ghost {
@@ -27,7 +28,6 @@ export default {
 		background: #ffffff;
 		color: #000;
 		padding: 5px 0;
-		line-height: 20px;
 		min-width: 150px;
 	}
 </style>

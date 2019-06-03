@@ -1,7 +1,9 @@
 <template>
 	<div class="infoWrap wt">
 		<div class="inner">
-			<h4 class="infoTitle">company <br>information</h4>
+			<div class="infoTitleWrap companyInfo">
+				<h4 class="infoTitle">company <br>information</h4>
+			</div>
 			<ul class="infoCountingWrap">
 				<li
 					v-for="nums in num"
@@ -13,11 +15,13 @@
 						class="subTxt"
 						v-html="nums.subTitle"
 					></p>
-					<span class="counting">{{ nums.countingTxt1 }}</span>
-					<b class="primary-color blue--text text--darken-3">{{ nums.counting }}</b>
-					<span class="counting">{{ nums.countingTxt2 }}</span>
-					<span class="subCounting">{{ nums.subCounting }}</span>
-					<span class="subCounting">{{ nums.subCountingTxt }}</span>
+					<div class="subTxtContent">
+						<span class="counting">{{ nums.countingTxt1 }}</span>
+						<b class="primary-color blue--text text--darken-3">{{ nums.counting }}</b>
+						<span class="counting">{{ nums.countingTxt2 }}</span>
+						<span class="subCounting">{{ nums.subCounting }}</span>
+						<span class="subCounting">{{ nums.subCountingTxt }}</span>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -49,19 +53,19 @@ export default {
 				},
 				{
 					title: 'Project',
-					subTitle: '',
-					countingTxt1: '',
-					counting: '',
-					countingTxt2: '',
+					subTitle: '두손의 가치를 빛낸 프로젝트들',
+					countingTxt1: '총',
+					counting: '000',
+					countingTxt2: '개',
 					subCounting: '',
 					subCountingTxt: '',
 				},
 				{
 					title: '걸어온 시간',
-					subTitle: '',
-					countingTxt1: '',
-					counting: '',
-					countingTxt2: '',
+					subTitle: '회사설립연도 2011년',
+					countingTxt1: '두손이 걸어온',
+					counting: '8',
+					countingTxt2: '년',
 					subCounting: '',
 					subCountingTxt: '',
 				},
@@ -74,13 +78,15 @@ export default {
 <style>
 	.infoWrap {
 		display: flex;
-		padding: 8% 0 8%;
-		background: #f6f6f6;
+		padding: calc(60px + 5vw) 5vw 5vw 5vw;
 		text-align: left;
 		height: 100vh;
 	}
 	.infoWrap.wt {
 		background: #ffffff;
+	}
+	.infoWrap .infoTitleWrap.companyInfo {
+		width:35%
 	}
 	.infoWrap .infoTitle {
 		font-size: 72px;
@@ -91,29 +97,31 @@ export default {
 		text-transform: capitalize;
 	}
 	.infoWrap .infoCountingWrap {
+		width:65%;
 		display: flex;
 		flex-wrap: wrap;
 		text-align: left;
 	}
 	.infoWrap .countingWrap {
 		width: 50%;
+		position: relative;
 	}
 	.infoWrap .countingWrap:nth-child(2),
 	.infoWrap .countingWrap:nth-child(4) {
 		border-left: 1px solid #DBDBDB;
-		padding-left: 50px;
+		padding-left: 2.5vw;
 	}
 	.infoWrap .countingWrap:nth-child(1),
 	.infoWrap .countingWrap:nth-child(2) {
 		border-bottom: 1px solid #DBDBDB;
-		padding-bottom: 30px;
+		padding-bottom: 2.5vw;
 	}
 	.infoWrap .countingWrap:nth-child(3),
 	.infoWrap .countingWrap:nth-child(4) {
-		padding-top: 40px;
+		padding-top: 2.5vw;
 	}
 	.infoWrap .countingWrap .countingTitle {
-		font-size: 18px;
+		font-size: 25px;
 		letter-spacing: -0.04em;
 		margin-bottom: 20px;
 	}
@@ -126,9 +134,10 @@ export default {
 	.infoWrap .counting {
 		color: #000;
 	}
+	/*
 	.infoWrap .counting:nth-last-of-type(3) {
 		margin-right: 40px;
-	}
+	} */
 	.infoWrap .primary-color {
 		font-size: 80px;
 		letter-spacing: -0.04em;
@@ -136,5 +145,13 @@ export default {
 	}
 	.infoWrap .subCounting {
 		color: #767676;
-	} 
+	}
+	.subTxtContent {
+		position: absolute;
+		bottom: calc(2.5vw - 30px);
+		right: 2.5vw;
+	}
+	.subTxtContent span {
+		font-size: 18px
+	}
 </style>

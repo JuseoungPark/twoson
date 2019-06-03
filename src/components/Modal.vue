@@ -124,6 +124,10 @@ export default {
 	/* tab */
 	.pf-nav-list {
 		display: flex;
+		background-color: #fff;
+    box-shadow: 0 8px 16px rgba(58,59,60,.2);
+		position: relative;
+		z-index: 10;
 	}
 	.pf-nav-item {
 		width: 25%;
@@ -141,6 +145,7 @@ export default {
     padding: 18px 0;
 		display: block;
 		border-left: 1px solid #555;
+		font-size: 18px;
 	}
 	a {
 		color: #555;

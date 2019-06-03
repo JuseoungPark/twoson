@@ -5,9 +5,12 @@
 		<SoluitonBanner />
 
 		<!-- 솔루션 pord 영역 -->
-		<SL01 />
+		<!-- <SL01 /> -->
 
-		<v-container grid-list-xl text-xs-center>
+		<v-container
+			grid-list-xl text-xs-center
+			class="solutionPordWrap"
+		>
 			<v-layout row wrap>
 				<v-flex v-for="(item, i) in items" :key="i" xs4>
 					<SolutionCard
@@ -16,7 +19,10 @@
 						:subTitleOfChild="item.subTitle"
 						class="solutionCard"
 					></SolutionCard>
-					<button @click="handleClickButton">얍</button>
+					<button
+						@click="handleClickButton"
+						class="btn-popup"
+					>얍</button>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -67,6 +73,16 @@ export default {
 					title: '<b>ts</b> web scanner',
 					subTitle: '사진촬영, 자동보정, 수동보정, 전송까지 <br> 오직 스트리밍 솔루션',
 				},
+				{
+					img: 'solution-ts-pdf-web-viewer.png',
+					title: '<b>ts</b> web scanner',
+					subTitle: '사진촬영, 자동보정, 수동보정, 전송까지 <br> 오직 스트리밍 솔루션',
+				},
+				{
+					img: 'solution-ts-web-fc-note.jpg',
+					title: '<b>ts</b> web scanner',
+					subTitle: '사진촬영, 자동보정, 수동보정, 전송까지 <br> 오직 스트리밍 솔루션',
+				},
 			],
 			// 팝업
 			visible: false,
@@ -87,5 +103,14 @@ export default {
 	}
 	.cardWrap.solutionCard:hover .cardTitleWrap {
 		background: rgba(41,158,224,.95);
+	}
+
+	.solutionPordWrap {
+		padding: 120px 0 80px;
+	}
+
+	.btn-popup {
+		opacity: 0;
+		height: 20px;
 	}
 </style>

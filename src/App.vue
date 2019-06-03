@@ -64,6 +64,9 @@ export default {
   p {
     margin: 0;
   }
+  a {
+    text-decoration: none;
+  }
   .taL {
     text-align: left ! important;
   }
@@ -81,6 +84,17 @@ export default {
     text-indent: -9999px;
 		font-size: 0;
     display: none;
+  }
+  .btn-ghost {
+    border: 1px solid #000;
+    padding: 13px 28px;
+    font-weight: bold;
+    font-size: 21px;
+  }
+  a.btn-ghost {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
   }
 </style>
 

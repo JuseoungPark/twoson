@@ -74,7 +74,7 @@ export default {
 			},
 		],
 
-		bgcr: 'rgba(0,42,84,.6)'
+		bgcr: 'rgba(0,42,84,.7)'
 	}),
 }
 </script>

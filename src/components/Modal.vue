@@ -4,20 +4,48 @@
 		v-if="visible"
 		@click.self="handleWrapperClick"
 	>
-		<div class="modal__dialog">
-			<header class="modal__header">
-				<h2 class="postTitle">{{ popupTitleOfChild }}</h2>
-				<button @click="$emit('update:visible', !visible)">Close</button>
-			</header>
+		<div
+			class="modal__dialog"
+		>
+			<div class="closeWrap">
+				<button
+					@click="$emit('update:visible', !visible)"
+					class="closeBtn"
+				><span>Close</span></button>
+			</div>
+			<Header
+				:popupTitleOfChild="popupTitle"
+				:orderingAgent="orderingAgent"
+				:description="description"
+			/>
 			<div class="modal__body">
 				<slot></slot>
-				<img :src="require(`@/assets/${img}.png`)" alt="">
+			</div>
+			<nav id="pf-nav" class="pf-nav">
+				<ul class="pf-nav-list">
+					<li
+						v-for="pjTab in tabs"
+						:key="pjTab"
+						class="pf-nav-item"
+					>
+						<a
+							:href="`${pjTab.zzz}`"
+							class="pf-nav-a"
+							@click="is-current"
+						>{{ pjTab.name }}</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="require">
+				고객 요구사항부터 차례로 보여드릴 계획입니다.
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import Header from '@/components/Modal-Header'
+
 export default {
 	name: 'my-modal',
 
@@ -27,10 +55,6 @@ export default {
 			require: true,
 			default: false,
 		},
-		popupTitleOfChild: {
-			type: String,
-			require: false,
-		}
 	},
 
 	methods: {
@@ -40,8 +64,35 @@ export default {
 	},
 
 	data: () => ({
-		img: 'solution-ts-web-scanner-cr'
+
+		orderingAgent: 'SAMSUNG X 두손소프트',
+		popupTitle: '삼성과 두손소프트가 함께 작업한 <br> 삼성페이 VR 프로젝트',
+		description: 'Samsung Pay(삼성 페이)는 기존 플라스틱 카드로 결제할 수 있는 거의 모든 곳에서 사용 가능한 간편하고 안전한 모바일 결제 서비스입니다. MST 결제방식과 NFC 결제방식을 모두 지원하여, 다른 어떤 모바일 결제 서비스보다도 훨씬 더 많은 곳에서 사용이 가능합니다. <br> 또한 Samsung Pay 및 신용카드/체크카드 사용 내역을 한 곳에서 제공하고, 현명한 소비생활을 위한 팁을 제공합니다.',
+
+
+		tabs: [
+			{
+				zzz: '#',
+				name: '고객사 요구사항',
+			},
+			{
+				zzz: '#',
+				name: '핵심과제 도출',
+			},
+			{
+				zzz: '#',
+				name: '실행안 구체화',
+			},
+			{
+				zzz: '#',
+				name: '구축 성과',
+			},
+		],
 	}),
+
+	components: {
+		Header,
+	},
 }
 </script>
 
@@ -53,8 +104,8 @@ export default {
 		bottom: 0;
 		left: 0;
 		position: fixed;
-		overflow: auto;
-		margin: 0;
+		overflow: hidden;
+		margin: 0 auto;
 		z-index: 999;
 		display: flex;
 		align-items: center;
@@ -62,31 +113,46 @@ export default {
 	}
 	.modal__dialog {
     width: 100%;
-    background: #303030;
-		color: #fff;
-		padding: 20% 18%;
+		height: 100%;
+    background: #fff;
+		color: #555;
+		overflow: auto;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
-@media (min-width: 1920px) {
-	.modal__dialog {
-		padding: 20% 28%;
-	}
-}
-	/* ::-webkit-scrollbar {
-		display:none;
-	} */
-	header.modal__header {
+
+	/* tab */
+	.pf-nav-list {
 		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		/* margin-bottom: 50px; */
 	}
-	.modal__body {
-		margin: 0 auto;
-		/* padding: 16px 100px; */
+	.pf-nav-item {
+		width: 25%;
 		text-align: center;
-		background: rgba(0,0,0,.2);
 	}
-	.modal__body img {
-		width: 100%;
+	.pf-nav-item:first-child .pf-nav-a {
+    border-left: 0;
+	}
+	.pf-nav-a.is-current, .pf-nav-a:hover {
+		border-left-color: #555;
+    background-color: #3a3b3c;
+    color: #fff;
+	}
+	.pf-nav-a {
+    padding: 18px 0;
+		display: block;
+		border-left: 1px solid #555;
+	}
+	a {
+		color: #555;
+    background-color: transparent;
+	}
+
+	/* 고객 요구사항 */
+	.require {
+		background: #fff;
+		height: 500px;
+		font-size: 40px;
+		text-align: center;
+		padding: 60px 10% 50px;
 	}
 </style>

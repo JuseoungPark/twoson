@@ -26,7 +26,7 @@ export default {
 
 <style>
   .mainLayout {
-    background: #f1f1f1;
+    background: url(~@/assets/bg-noise.jpg) 0 0 repeat;
     padding: 150px 0 75px;
     text-align: center;
   }

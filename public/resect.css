@@ -5,6 +5,8 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,8 +29,9 @@ time, mark, audio, video {
     background:transparent;
 }
 
-body {
-    line-height:1;
+body,html {
+    font-size: 14px;
+	color:#333
 }
 
 article,aside,details,figcaption,figure,

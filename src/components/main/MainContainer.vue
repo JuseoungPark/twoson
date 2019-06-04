@@ -104,6 +104,8 @@ export default {
 	}
 	.mainCtLayout .contentSubTxt {
 		font-size: 16px;
+		font-weight: 300;
+		font-family: "Noto Sans KR"
 	}
 	.mainCtLayout.portFolio {
 		background: url(~@/assets/main-layout-02.jpg) center center no-repeat;
@@ -206,9 +208,9 @@ export default {
 		line-height: 29px;
 		margin-bottom: 20px;
 	}
-	/* .postSubTxt {
-		font-size: 14px;
-	} */
+	.postSubTxt {
+		font-weight: 300
+	}
 	
 	/* type of btn */
 	.btn {

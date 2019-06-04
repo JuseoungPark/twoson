@@ -64,6 +64,7 @@ export default {
 		color: #333;
 		margin-top: 12px;
 		word-break: keep-all;
+		font-weight: 300
 	}
 	.bottomWrap {
 		display: flex;

@@ -119,9 +119,11 @@ export default {
 		left: 0;
 	}
 	.ctTxt {
+		font-family: "Noto Sans KR";
 		padding-left: 10px;
 		position: relative;
-		font-size: 16px
+		font-size: 16px;
+		font-weight: 300
 	}
 	.infoHistoryWrap .majorIssue {
 		margin-bottom: 10px;

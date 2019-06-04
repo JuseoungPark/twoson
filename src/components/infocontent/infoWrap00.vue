@@ -52,7 +52,7 @@ export default {
 	}
 	.infoSubCopy {
 		font-size: 16px;
-		font-weight: lighter;
+		font-weight: 300;
 		color: #333;
 		text-align: justify;
 		word-break: break-all;

@@ -13,7 +13,7 @@
 					class="closeBtn"
 				><span>Close</span></button>
 			</div>
-			<Header
+			<ModalHeader
 				:popupTitleOfChild="popupTitle"
 				:orderingAgent="orderingAgent"
 				:description="description"
@@ -36,15 +36,28 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="require">
-				고객 요구사항부터 차례로 보여드릴 계획입니다.
+			<Require></Require>
+			<Conclusion></Conclusion>
+			<Actualization></Actualization>
+			<Outcome></Outcome>
+
+			<!-- 프로젝트 문의 -->
+			<div class="project-inquiry">
+				<h3 class="head-copy">두손소프트가 함께 고민하겠습니다</h3>
+				<button
+					class="btn-ghost wt"
+				>프로젝트 문의</button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import Header from '@/components/Modal-Header'
+import ModalHeader from '@/components/Modal-Header'
+import Require from '@/views/post/PF-Content-01'
+import Conclusion from '@/views/post/PF-Content-02'
+import Actualization from '@/views/post/PF-Content-03'
+import Outcome from '@/views/post/PF-Content-04'
 
 export default {
 	name: 'my-modal',
@@ -91,8 +104,13 @@ export default {
 	}),
 
 	components: {
-		Header,
+		ModalHeader,
+		Require,
+		Conclusion,
+		Actualization,
+		Outcome,
 	},
+
 }
 </script>
 
@@ -152,12 +170,27 @@ export default {
     background-color: transparent;
 	}
 
-	/* 고객 요구사항 */
-	.require {
-		background: #fff;
-		height: 500px;
-		font-size: 40px;
+	/* 프로젝트 문희 */
+	.project-inquiry {
+		/* height: 200px; */
+		min-height: 120px;
+		background: #0054A6;
+		color: #fff;
 		text-align: center;
-		padding: 60px 10% 50px;
+		padding: 42px 0;
+	}
+	.head-copy {
+		font-size: 34px;
+		font-weight: normal;
+		margin-bottom: 30px;
+	}
+	.btn-ghost.wt {
+		border: 1px solid #fff;
+	}
+	.project-inquiry .btn-ghost {
+		padding: 8px 32px;
+		letter-spacing: -0.04em;
+		font-size: 26px;
+		font-weight: lighter;
 	}
 </style>

@@ -1,7 +1,6 @@
 <template>
 	<v-card class="cardWrap">
 		<v-img
-			min-height="334"
 			:src="require(`@/assets/${imgOfChild}`)"
 			class="cardImages"
 		>
@@ -70,6 +69,14 @@ export default {
 		font-size: 16px;
 		word-break: keep-all;
 	}
+	.cardImages {
+		min-height: 324px;
+	}
+@media screen and (min-width: 1920px) {
+	.cardImages {
+		min-height: 400px;
+	}
+}
 
 	/* card hover */
 	.cardWrap:hover .cardTitleWrap {

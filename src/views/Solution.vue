@@ -98,9 +98,6 @@ export default {
 </script>
 
 <style>
-	.v-content__wrap > .solution {
-		padding: 82px 0 0 0;
-	}
 	.cardWrap.solutionCard:hover .cardTitleWrap {
 		background: rgba(41,158,224,.95);
 	}
@@ -112,5 +109,8 @@ export default {
 	.btn-popup {
 		opacity: 0;
 		height: 20px;
+	}
+	.solution .banner .v-card__title {
+		padding-top: 62px;
 	}
 </style>
